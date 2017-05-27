@@ -1,0 +1,31 @@
+Step 1
+sudo apt-get update
+wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
+sudo su
+echo "deb http://nightly.odoo.com/10.0/nightly/deb/ ./" >> /etc/apt/sources.list
+
+Step 2. Create the Odoo user that will own and run the application
+sudo adduser odoo
+
+Step 3. Install and configure the database server, PostgreSQL
+sudo apt-get install postgresql
+
+Then configure the Odoo user on postgres: First change to the postgres user so we have the necessary privileges to configure the database.
+sudo su –postgres
+createuser --createdb --username postgres --no-createrole --no-superuser --pwprompt odoo
+exit
+Step 4. Install the necessary Python libraries for the server
+sudo apt-get install python-cups python-dateutil python-decorator python-docutils python-feedparser python-gdata python-geoip python-gevent python-imaging python-jinja2 python-ldap python-libxslt1 python-lxml python-mako python-mock python-openid python-passlib python-psutil python-psycopg2 python-pybabel python-pychart python-pydot python-pyparsing python-pypdf python-reportlab python-requests python-simplejson python-tz python-unicodecsv python-unittest2 python-vatnumber python-vobject python-werkzeug python-xlwt python-yaml wkhtmltopdf
+
+Step 5
+Install :
+apt-get update && apt-get install odoo
+
+Step 6. Configuring the OpenERP application
+nano /etc/odoo/openerp-server.conf
+db_password = odoo
+ps aux|grep odoo
+kill -9
+su odoo
+openerp-server
+0.0.0.0 :8069
