@@ -1,0 +1,4 @@
+tạo một trường được compute = trường cost_price (sẻ
+
+
+thêm thuộc tính on_change cho trường pages, nêu pages < 50 thì không cho Save

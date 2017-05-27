@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="list_author_view_form" model="ir.ui.view">
+            <field name="name">Authors</field>
+            <field name="model">authors</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name"/>
+                        <field name="old_authors"/>
+                        <field name="book_ids"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="list_author_view_tree" model="ir.ui.view">
+            <field name="name">List Authors</field>
+            <field name="model">authors</field>
+            <field name="arch" type="xml">
+                <tree string="All authors">
+                    <field name="name" string="All Authors"/>
+                    <field name="old_authors" string="Old authors"/>
+                    <field name="count_books"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="list_author_action" model="ir.actions.act_window">
+            <field name="name">List all Author</field>
+            <field name="res_model">authors</field>
+            <field name="view_id" ref="list_author_view_tree"/>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cook_book/.idea/cook_book.iml" filepath="$PROJECT_DIR$/../cook_book/.idea/cook_book.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../first_module/.idea/first_module.iml" filepath="$PROJECT_DIR$/../first_module/.idea/first_module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/my_module.iml" filepath="$PROJECT_DIR$/.idea/my_module.iml" />
+      <module fileurl="file://$USER_HOME$/odoo10/.idea/odoo10.iml" filepath="$USER_HOME$/odoo10/.idea/odoo10.iml" />
+    </modules>
+  </component>
+</project>
